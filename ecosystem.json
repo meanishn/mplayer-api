@@ -1,0 +1,12 @@
+{
+    "apps": [{
+        "name": "doctual-api",
+        "script": "./app.js",
+        "cwd": "/srv/doctual-api/current",
+        "error_file": "/srv/doctual-api/logs/app.err.log",
+        "out_file": "/srv/doctual-api/logs/app.out.log",
+        "log_type": "json",
+        "exec_mode": "cluster",
+        "instances": "max"
+    }]
+}

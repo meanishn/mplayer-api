@@ -1,0 +1,5 @@
+#!/bin/bash
+sourcepdf=$1
+finalpdf=$2
+gs -o $finalpdf -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress $sourcepdf
+mv $finalpdf $sourcepdf

@@ -1,0 +1,7 @@
+#!/bin/bash
+INPUTFILE=$1
+OUTPUTFILE=$2
+pdftk $INPUTFILE output tmp.pdf uncompress
+LANG=C sed -n '/^\/Annots/!p' tmp.pdf > $OUTPUTFILE
+rm -f tmp.pdf
+#pdftk stripped.pdf output final.pdf compress

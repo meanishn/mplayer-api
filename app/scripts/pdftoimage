@@ -1,0 +1,7 @@
+#!/bin/bash
+uploadPath=$(dirname "$1")
+SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
+cd $uploadPath
+FILENAME=$(printf %q "$1")
+# "$SCRIPT_DIR/removeannotations" $FILENAME "$FILENAME_test"
+pdftoppm -png $FILENAME $2
